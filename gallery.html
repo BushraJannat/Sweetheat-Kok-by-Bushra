@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Sweetheat Kök by Bushra</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ---------- GALLERY ---------- */
+
+        .gallery-intro {
+            text-align: center;
+        }
+
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        .gallery-card {
+            background-color: var(--light-color);
+            border-radius: 18px;
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .gallery-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .gallery-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+
+        .gallery-card:hover img {
+            transform: scale(1.04);
+        }
+
+
+        .gallery-caption {
+            padding: 22px;
+        }
+
+
+        .gallery-caption h3 {
+            color: var(--main-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+
+        .gallery-caption p {
+            margin: 0;
+        }
+
+
+        /* ---------- CONTACT FORM ---------- */
+
+        .contact-form {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--main-color);
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 15px;
+
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            font-family: var(--main-font);
+            font-size: 16px;
+
+            background-color: var(--white-color);
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: 2px solid var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+
+        .form-group textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+
+        .submit-button {
+            border: none;
+            cursor: pointer;
+
+            padding: 13px 28px;
+
+            background-color: var(--main-color);
+            color: var(--white-color);
+
+            border-radius: 8px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        .submit-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+
+        /* ---------- RESPONSIVE ---------- */
+
+        @media (max-width: 800px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery-card img {
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="brand">
+
+            <h1>Sweetheat Kök</h1>
+
+            <p>by Bushra</p>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="journey.html">
+                My Cooking Journey
+            </a>
+
+            <a href="recipes.html">
+                Recipes &amp; Skills
+            </a>
+
+            <a class="active" href="gallery.html">
+                Gallery
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+
+        <!-- GALLERY INTRO -->
+
+        <section class="hero gallery-intro">
+
+            <div class="hero-content">
+
+                <p class="small-heading">
+                    MY FOOD GALLERY
+                </p>
+
+
+                <h2>
+                    A Collection From My Kitchen
+                </h2>
+
+
+                <p>
+                    This gallery brings together nine dishes from my
+                    cooking portfolio. Each photograph represents a
+                    different part of my cooking practice and creativity.
+                </p>
+
+
+                <p>
+                    From traditional South Asian favourites to
+                    Asian-inspired dishes and European-inspired desserts,
+                    these creations show the variety of food I enjoy
+                    making.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 3 x 3 GALLERY -->
+
+        <section class="intro">
+
+            <h2>
+                My Cooking Creations
+            </h2>
+
+
+            <div class="gallery-grid">
+
+
+                <!-- 1. BEEF TEHARI -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/beef-tehari.png"
+                        alt="Homemade Beef Tehari"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Beef Tehari
+                        </h3>
+
+                        <p>
+                            A comforting Bangladeshi dish made with
+                            aromatic spices and tender beef, connecting
+                            my cooking with my food heritage.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2. CHICKEN ROAST -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/chicken-roast.png"
+                        alt="Homemade Chicken Roast"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Chicken Roast
+                        </h3>
+
+                        <p>
+                            A special dish that reminds me of family
+                            gatherings and the joy of preparing food
+                            for people I care about.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 3. GULAB JAMUN -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/gulab-jamun.jpg"
+                        alt="Homemade Gulab Jamun"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Gulab Jamun
+                        </h3>
+
+                        <p>
+                            A traditional South Asian sweet that
+                            requires patience, careful preparation
+                            and attention to texture.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 4. TIRAMISU -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/tiramisu.jpg"
+                        alt="Homemade Tiramisu dessert"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Tiramisu
+                        </h3>
+
+                        <p>
+                            A European-inspired dessert that allowed me
+                            to explore layered textures and a different
+                            style of presentation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 5. RED VELVET CAKE -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/red-velvet-cake.png"
+                        alt="Homemade Cheese Red Velvet Pound Cake"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Cheese Red Velvet Pound Cake
+                        </h3>
+
+                        <p>
+                            A creative dessert combining rich red velvet
+                            cake with a smooth cheese element and
+                            decorative presentation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 6. FRIED RICE -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/fried-rice.png"
+                        alt="Homemade Bangladeshi-Chinese style Fried Rice"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Fried Rice
+                        </h3>
+
+                        <p>
+                            A Bangladeshi-Chinese inspired dish where
+                            quick cooking, timing and balanced seasoning
+                            come together.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 7. CHICKEN FRY -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/chicken-fry.jpg"
+                        alt="Homemade crispy Chicken Fry"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Chicken Fry
+                        </h3>
+
+                        <p>
+                            Crispy and well-seasoned chicken that
+                            represents my enjoyment of creating
+                            satisfying textures.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 8. CHICKEN HOT CHILLI -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/chicken-hot-chilli.jpg"
+                        alt="Homemade Chicken Hot Chilli"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Chicken Hot Chilli
+                        </h3>
+
+                        <p>
+                            A spicy Asian-inspired creation where
+                            chilli, sweetness and savoury flavours
+                            are carefully balanced.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 9. RAS MALAI -->
+
+                <article class="gallery-card">
+
+                    <img
+                        src="images/ras-malai.jpg"
+                        alt="Homemade traditional Ras Malai"
+                    >
+
+                    <div class="gallery-caption">
+
+                        <h3>
+                            Ras Malai
+                        </h3>
+
+                        <p>
+                            A traditional South Asian dessert that
+                            reflects my appreciation for delicate
+                            textures and gentle sweetness.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONTACT -->
+
+        <section class="intro">
+
+            <h2>
+                Get in Touch
+            </h2>
+
+
+            <p>
+                Have a question about my cooking portfolio or want to
+                share your thoughts? Send me a message.
+            </p>
+
+
+            <form class="contact-form">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- SUBJECT -->
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Message subject"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    Send Message
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Sweetheat Kök by Bushra
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,496 @@
+/* =========================
+   Sweetheat Kök by Bushra
+   Euro-Asian Fusion Portfolio
+   ========================= */
+
+
+/* ---------- DESIGN SYSTEM ---------- */
+
+:root {
+    --main-color: #8b3a3a;
+    --accent-color: #e8a87c;
+    --light-color: #fff8f2;
+    --dark-color: #2f2522;
+    --white-color: #ffffff;
+
+    --space-small: 10px;
+    --space-medium: 20px;
+    --space-large: 40px;
+
+    --main-font: Arial, sans-serif;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header,
+header {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+.brand {
+    display: block;
+}
+
+.brand h1,
+header h1 {
+    margin: 0 0 5px;
+    font-size: 44px;
+}
+
+.brand p,
+header > p {
+    margin: 5px 0 30px;
+    font-size: 18px;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.navigation,
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.navigation a,
+nav a {
+    display: inline-block;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active,
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+
+/* ---------- KEYBOARD ACCESSIBILITY ---------- */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+
+/* ---------- MAIN ---------- */
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+section {
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- HOME HERO ---------- */
+
+.hero {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    padding: 70px 50px;
+    border-radius: 12px;
+}
+
+.hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.hero-content > * {
+    display: block !important;
+    width: 100% !important;
+    max-width: 800px !important;
+}
+
+.small-heading {
+    color: var(--accent-color);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
+}
+
+.hero h2 {
+    color: var(--main-color);
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 10px 0 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 0 0 18px 0;
+}
+
+.hero-button {
+    width: auto !important;
+    display: inline-block !important;
+    margin-top: 15px;
+    padding: 13px 25px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+
+/* ---------- HOME FOOD INSPIRATION ---------- */
+
+.food-inspiration {
+    border-radius: 12px;
+}
+
+.food-inspiration h2 {
+    color: var(--main-color);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.food-cards {
+    display: flex;
+    gap: 25px;
+}
+
+.food-cards article {
+    flex: 1;
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-cards article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.food-cards h3 {
+    color: var(--main-color);
+    margin-top: 0;
+}
+
+
+/* ---------- JOURNEY PAGE ---------- */
+
+.journey-hero {
+    background-color: var(--white-color);
+    padding: 55px 60px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.journey-hero .small-heading {
+    color: var(--main-color);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.journey-hero h2 {
+    color: var(--main-color);
+    margin: 10px 0 20px;
+    font-size: 32px;
+}
+
+.journey-hero p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.journey-section {
+    background-color: var(--white-color);
+    padding: 35px 45px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+
+    /* Balanced Form: consistent spacing and proportions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.journey-section h2 {
+    color: var(--main-color);
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.journey-section p {
+    max-width: 850px;
+    margin-bottom: 16px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer,
+footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.site-footer h3 {
+    margin-top: 0;
+}
+
+.site-footer nav {
+    margin: 15px 0;
+}
+
+.site-footer nav a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin: 0 8px;
+    padding: 5px;
+}
+
+.site-footer nav a:hover {
+    color: var(--accent-color);
+    background-color: transparent;
+    transform: none;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .site-header,
+    header {
+        padding: 35px 15px 25px;
+    }
+
+    .brand h1,
+    header h1 {
+        font-size: 34px;
+    }
+
+    .navigation,
+    nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .hero {
+        padding: 45px 25px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .food-cards {
+        flex-direction: column;
+    }
+
+    .journey-hero {
+        padding: 40px 25px;
+    }
+
+    .journey-hero h2 {
+        font-size: 27px;
+    }
+
+    .journey-section {
+        padding: 30px 25px;
+        margin-bottom: 20px;
+    }
+
+    .site-footer nav {
+        flex-direction: column;
+    }
+}
+/* =========================
+   RECIPES & SKILLS
+   ========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.skill-card h3 {
+    color: var(--main-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    margin-bottom: 15px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.process-step {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+.process-step span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.process-step h3 {
+    color: var(--main-color);
+    margin: 5px 0 10px;
+}
+
+.problem-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.problem-card {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid var(--main-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+.problem-card h3 {
+    color: var(--main-color);
+    margin-top: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .problem-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .skills-grid,
+    .process-grid,
+    .problem-list {
+        grid-template-columns: 1fr;
+    }
+
+}
