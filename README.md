@@ -1,2 +1,80 @@
-# Sweetheat-Kok-by-Bushra
-My Lab 1 personal cooking portfolio website
+\# Sweetheat Kök by Bushra
+
+
+
+\## Lab 2 – Interactive Portfolio Enhancements
+
+
+
+A personal cooking portfolio combining Bangladeshi flavours, Asian heritage and European inspiration.
+
+
+
+\### Target Grade
+
+
+
+Grade 5
+
+
+
+\### Lab 2 Features
+
+
+
+\- Interactive feedback form with JavaScript validation
+
+\- Live character counter
+
+\- Clear and success feedback
+
+\- Data-driven cooking skills showcase
+
+\- Dynamic skill cards
+
+\- Category filtering
+
+\- Skill sorting
+
+\- Accessibility display settings
+
+\- Small, Medium and Large text sizes
+
+\- Normal and High Contrast modes
+
+\- Persistent accessibility settings using localStorage
+
+
+
+\### How to Run
+
+
+
+1\. Download or clone this repository.
+
+2\. Open the project folder.
+
+3\. Open `index.html` in a web browser.
+
+4\. No server or backend is required.
+
+
+
+\### Technologies
+
+
+
+\- HTML5
+
+\- CSS3
+
+\- Vanilla JavaScript
+
+
+
+\### Project
+
+
+
+Sweetheat Kök by Bushra is a personal cooking portfolio that presents my cooking journey, skills, food gallery and interactive JavaScript features.
+
