@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Sweetheat Kök by Bushra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <h1>Sweetheat Kök</h1>
+        <p>by Bushra</p>
+    </div>
+
+    <nav class="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="journey.html">My Cooking Journey</a>
+        <a href="recipes.html">Recipes &amp; Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="small-heading">YOUR FEEDBACK</p>
+            <h2>Share Your Thoughts</h2>
+            <p>
+                I would love to hear what you think about my cooking journey,
+                recipes and Euro-Asian fusion ideas.
+            </p>
+        </div>
+    </section>
+
+    <section class="feedback-section">
+        <h2>Feedback Form</h2>
+        <p>
+            Please fill in the form below. Your feedback helps me improve.
+        </p>
+
+        <form id="feedbackForm" novalidate>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName"
+                       autocomplete="name" required>
+                <p class="error-message" id="fullNameError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"
+                       autocomplete="email" required>
+                <p class="error-message" id="emailError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Topic of Interest</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Choose a topic</option>
+                    <option value="Cooking Journey">Cooking Journey</option>
+                    <option value="Recipes and Skills">Recipes &amp; Skills</option>
+                    <option value="Food Gallery">Food Gallery</option>
+                    <option value="Euro-Asian Fusion">Euro-Asian Fusion</option>
+                </select>
+                <p class="error-message" id="topicError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" rows="6"
+                          minlength="15" required></textarea>
+                <p class="character-counter" id="characterCounter">
+                    0 / 15 characters minimum
+                </p>
+                <p class="error-message" id="commentsError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="website">Website (optional)</label>
+                <input type="url" id="website" name="website"
+                       placeholder="https://example.com">
+                <p class="error-message" id="websiteError"></p>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="hero-button">Send Feedback</button>
+                <button type="button" id="clearButton" class="clear-button">
+                    Clear
+                </button>
+            </div>
+
+            <div id="formStatus" class="form-status"
+                 role="status" aria-live="polite"></div>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <h3>Sweetheat Kök</h3>
+    <p>Euro-Asian fusion, made with love.</p>
+
+    <nav aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="journey.html">My Cooking Journey</a>
+        <a href="recipes.html">Recipes &amp; Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <p>&copy; 2026 Sweetheat Kök by Bushra</p>
+</footer>
+
+</body>
+</html>
