@@ -1,62 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cooking Skills | Sweetheat Kök by Bushra</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header class="site-header">
-
         <div class="brand">
             <h1>Sweetheat Kök</h1>
             <p>by Bushra</p>
         </div>
 
         <nav class="navigation">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="journey.html">
-                My Cooking Journey
-            </a>
-
-            <a class="active" href="recipes.html">
-                Recipes &amp; Skills
-            </a>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="journey.html">My Cooking Journey</a>
+            <a class="active" href="recipes.html">Recipes &amp; Skills</a>
+            <a href="gallery.html">Gallery</a>
         </nav>
-
     </header>
-
 
     <main>
 
         <!-- INTRO -->
-
         <section class="hero">
-
             <div class="hero-content">
+                <p class="small-heading">COOKING SKILLS</p>
 
-                <p class="small-heading">
-                    COOKING SKILLS
-                </p>
-
-                <h2>
-                    Techniques Behind My Cooking
-                </h2>
+                <h2>Techniques Behind My Cooking</h2>
 
                 <p>
                     Good cooking is not only about having a recipe.
@@ -69,232 +45,212 @@
                     developed through years of cooking, experimenting
                     and learning from experience.
                 </p>
-
             </div>
-
         </section>
 
-
         <!-- SKILL ACQUISITION -->
-
         <section class="intro">
-
-            <h2>
-                How I Learned My Cooking Skills
-            </h2>
+            <h2>How I Learned My Cooking Skills</h2>
 
             <div class="skills-grid">
-
                 <article class="skill-card">
-
-                    <h3>
-                        Learning From My Mother
-                    </h3>
-
+                    <h3>Learning From My Mother</h3>
                     <p>
                         My first cooking lessons came from watching my
                         mother in the kitchen. I learned the importance
                         of preparation, seasoning and patience by observing
                         how she cooked everyday meals.
                     </p>
-
                     <p>
                         I still use these basic habits when preparing
                         traditional Bangladeshi dishes.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Learning From Recipes
-                    </h3>
-
+                    <h3>Learning From Recipes</h3>
                     <p>
                         After 2013, I started following recipes from a
                         Bangladeshi recipe book. Trying different dishes
                         taught me how ingredients, measurements and
                         cooking methods work together.
                     </p>
-
                     <p>
                         I used this approach when learning to prepare
                         dishes such as tehari, chicken roast and desserts.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Learning Through Practice
-                    </h3>
-
+                    <h3>Learning Through Practice</h3>
                     <p>
                         The biggest part of my learning came from cooking
                         repeatedly. I learned to taste food, notice mistakes,
                         adjust seasoning and understand how heat and timing
                         affect the result.
                     </p>
-
                     <p>
                         I now use these skills whenever I experiment with
                         familiar dishes or create something different.
                     </p>
-
                 </article>
-
-
             </div>
-
         </section>
 
+        <!-- INTERACTIVE SKILLS SHOWCASE -->
+        <section class="intro" id="interactive-skills">
+            <h2>My Interactive Cooking Skills</h2>
+
+            <p>
+                Explore my cooking skills by category and sort them
+                by proficiency, experience or name.
+            </p>
+
+            <div class="skill-controls">
+                <h3>Filter by category</h3>
+
+                <div class="filter-buttons">
+                    <button type="button"
+                        data-category="all"
+                        aria-pressed="true"
+                        class="active-filter">
+                        All Skills
+                    </button>
+
+                    <button type="button"
+                        data-category="Preparation"
+                        aria-pressed="false">
+                        Preparation
+                    </button>
+
+                    <button type="button"
+                        data-category="Flavour"
+                        aria-pressed="false">
+                        Flavour
+                    </button>
+
+                    <button type="button"
+                        data-category="Cooking Techniques"
+                        aria-pressed="false">
+                        Cooking Techniques
+                    </button>
+                </div>
+
+                <h3>Sort skills</h3>
+
+                <label for="skillSort">Sort by:</label>
+
+                <select id="skillSort">
+                    <option value="proficiency">
+                        Proficiency: Highest first
+                    </option>
+                    <option value="experience">
+                        Experience: Highest first
+                    </option>
+                    <option value="name">
+                        Name: A–Z
+                    </option>
+                </select>
+            </div>
+
+            <p id="skillsCounter" aria-live="polite">
+                Loading skills...
+            </p>
+
+            <div class="skills-grid" id="skillsContainer">
+                <!-- JavaScript will create skill cards here. -->
+            </div>
+        </section>
 
         <!-- PRACTICAL TECHNIQUES -->
-
         <section class="intro">
-
-            <h2>
-                Skills I Use in My Kitchen
-            </h2>
+            <h2>Skills I Use in My Kitchen</h2>
 
             <div class="skills-grid">
-
                 <article class="skill-card">
-
-                    <h3>
-                        Knife &amp; Preparation
-                    </h3>
-
+                    <h3>Knife &amp; Preparation</h3>
                     <p>
                         I learned preparation mainly through practice and
                         by working alongside my mother and husband.
                         Consistent preparation makes cooking easier and
                         more organised.
                     </p>
-
                     <p>
                         I use this skill when preparing vegetables, meat
                         and other ingredients before cooking.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Marinating
-                    </h3>
-
+                    <h3>Marinating</h3>
                     <p>
                         I learned that marinating gives ingredients time
                         to absorb flavour. I pay attention to seasoning,
                         spices and marinating time.
                     </p>
-
                     <p>
                         I use this technique especially when preparing
                         chicken and other meat dishes.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Spice Layering
-                    </h3>
-
+                    <h3>Spice Layering</h3>
                     <p>
                         Through repeated cooking, I learned that adding
                         spices at different stages can create deeper flavour.
                     </p>
-
                     <p>
                         I use this technique in Bangladeshi and Asian-style
                         dishes where spices are an important part of the
                         final taste.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Heat Control
-                    </h3>
-
+                    <h3>Heat Control</h3>
                     <p>
                         Experience taught me that heat affects cooking time,
                         texture and flavour. I learned to change the heat
                         instead of simply following one temperature.
                     </p>
-
                     <p>
                         I use this when frying, simmering and cooking meat
                         so that the outside and inside develop properly.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Texture Control
-                    </h3>
-
+                    <h3>Texture Control</h3>
                     <p>
                         I learned to judge whether food should be crispy,
                         soft, creamy, tender or firm by tasting and observing
                         the result while cooking.
                     </p>
-
                     <p>
                         This is particularly useful when preparing fried food,
                         desserts and dishes where texture is important.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Timing &amp; Coordination
-                    </h3>
-
+                    <h3>Timing &amp; Coordination</h3>
                     <p>
                         Cooking regularly taught me that different ingredients
                         often need different cooking times.
                     </p>
-
                     <p>
                         I use planning and timing to bring several parts of
                         a meal together without letting one part become
                         overcooked.
                     </p>
-
                 </article>
-
             </div>
-
         </section>
 
-
         <!-- COOKING PROCESS -->
-
         <section class="intro">
-
-            <h2>
-                My Cooking Process
-            </h2>
+            <h2>My Cooking Process</h2>
 
             <p>
                 I usually follow a simple process when I cook. It gives me
@@ -303,173 +259,99 @@
             </p>
 
             <div class="process-grid">
-
                 <article class="process-step">
-
                     <span>01</span>
-
-                    <h3>
-                        Prepare
-                    </h3>
-
+                    <h3>Prepare</h3>
                     <p>
                         I organise ingredients and prepare what is needed
                         before I start cooking.
                     </p>
-
                 </article>
 
-
                 <article class="process-step">
-
                     <span>02</span>
-
-                    <h3>
-                        Season
-                    </h3>
-
+                    <h3>Season</h3>
                     <p>
                         I build the basic flavour using appropriate spices
                         and seasonings.
                     </p>
-
                 </article>
 
-
                 <article class="process-step">
-
                     <span>03</span>
-
-                    <h3>
-                        Cook
-                    </h3>
-
+                    <h3>Cook</h3>
                     <p>
                         I choose the appropriate heat and cooking method
                         and pay attention to timing.
                     </p>
-
                 </article>
 
-
                 <article class="process-step">
-
                     <span>04</span>
-
-                    <h3>
-                        Taste
-                    </h3>
-
+                    <h3>Taste</h3>
                     <p>
                         I taste the food during cooking rather than waiting
                         until the very end.
                     </p>
-
                 </article>
 
-
                 <article class="process-step">
-
                     <span>05</span>
-
-                    <h3>
-                        Adjust
-                    </h3>
-
+                    <h3>Adjust</h3>
                     <p>
                         If something is missing, I adjust the seasoning,
                         texture or cooking time.
                     </p>
-
                 </article>
 
-
                 <article class="process-step">
-
                     <span>06</span>
-
-                    <h3>
-                        Present
-                    </h3>
-
+                    <h3>Present</h3>
                     <p>
                         Finally, I think about portioning and presentation
                         so the food looks inviting.
                     </p>
-
                 </article>
-
             </div>
-
         </section>
 
-
         <!-- EVIDENCE -->
-
         <section class="intro">
-
-            <h2>
-                Skills in Practice
-            </h2>
+            <h2>Skills in Practice</h2>
 
             <div class="skills-grid">
-
                 <article class="skill-card">
-
-                    <h3>
-                        Beef Tehari
-                    </h3>
-
+                    <h3>Beef Tehari</h3>
                     <p>
                         This dish gives me an opportunity to use spice
                         layering, heat control and timing. I pay attention
                         to how the spices develop before combining everything.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Chicken Roast
-                    </h3>
-
+                    <h3>Chicken Roast</h3>
                     <p>
                         Chicken roast allows me to practise marinating,
                         seasoning and heat control while focusing on
                         tenderness and flavour.
                     </p>
-
                 </article>
 
-
                 <article class="skill-card">
-
-                    <h3>
-                        Desserts &amp; Baking
-                    </h3>
-
+                    <h3>Desserts &amp; Baking</h3>
                     <p>
                         Desserts such as gulab jamun, ras malai, tiramisu
                         and red velvet cake help me practise measurements,
                         texture, timing and presentation.
                     </p>
-
                 </article>
-
             </div>
-
         </section>
 
-
         <!-- PROBLEM SOLVING -->
-
         <section class="intro">
-
-            <h2>
-                Problem Solving in the Kitchen
-            </h2>
+            <h2>Problem Solving in the Kitchen</h2>
 
             <p>
                 Cooking does not always go exactly as planned. I have
@@ -478,68 +360,40 @@
             </p>
 
             <div class="problem-list">
-
                 <article class="problem-card">
-
-                    <h3>
-                        Too Salty
-                    </h3>
-
+                    <h3>Too Salty</h3>
                     <p>
                         If a dish becomes too salty, I try to balance the
                         flavour by adjusting other ingredients rather than
                         adding more seasoning.
                     </p>
-
                 </article>
 
-
                 <article class="problem-card">
-
-                    <h3>
-                        Too Dry
-                    </h3>
-
+                    <h3>Too Dry</h3>
                     <p>
                         When food becomes too dry, I consider whether more
                         moisture or a lower cooking temperature is needed.
                     </p>
-
                 </article>
 
-
                 <article class="problem-card">
-
-                    <h3>
-                        Not Crispy Enough
-                    </h3>
-
+                    <h3>Not Crispy Enough</h3>
                     <p>
                         For crispy food, I pay attention to moisture, oil
                         temperature and cooking time. Small changes can
                         improve the final texture.
                     </p>
-
                 </article>
-
             </div>
-
         </section>
 
-
         <!-- CONTINUOUS LEARNING -->
-
         <section class="hero">
-
             <div class="hero-content">
+                <p class="small-heading">CONTINUOUS LEARNING</p>
 
-                <p class="small-heading">
-                    CONTINUOUS LEARNING
-                </p>
-
-                <h2>
-                    Skills I Am Still Improving
-                </h2>
+                <h2>Skills I Am Still Improving</h2>
 
                 <p>
                     Cooking is a skill that can always be improved.
@@ -557,25 +411,15 @@
                     My goal is to learn from each experience and become
                     a more confident and creative cook.
                 </p>
-
             </div>
-
         </section>
 
-
         <!-- GALLERY LINK -->
-
         <section class="hero">
-
             <div class="hero-content">
+                <p class="small-heading">MY CREATIONS</p>
 
-                <p class="small-heading">
-                    MY CREATIONS
-                </p>
-
-                <h2>
-                    Explore My Food Gallery
-                </h2>
+                <h2>Explore My Food Gallery</h2>
 
                 <p>
                     Visit the gallery to see a collection of my original
@@ -585,23 +429,15 @@
                 <a class="hero-button" href="gallery.html">
                     Visit Gallery
                 </a>
-
             </div>
-
         </section>
 
     </main>
 
-
     <footer class="site-footer">
+        <h3>Sweetheat Kök</h3>
 
-        <h3>
-            Sweetheat Kök
-        </h3>
-
-        <p>
-            Euro-Asian fusion, made with love.
-        </p>
+        <p>Euro-Asian fusion, made with love.</p>
 
         <nav>
             <a href="index.html">Home</a>
@@ -610,12 +446,10 @@
             <a href="gallery.html">Gallery</a>
         </nav>
 
-        <p>
-            &copy; 2026 Sweetheat Kök by Bushra
-        </p>
-
+        <p>&copy; 2026 Sweetheat Kök by Bushra</p>
     </footer>
 
+    <script src="skills.js" defer></script>
 </body>
 
 </html>

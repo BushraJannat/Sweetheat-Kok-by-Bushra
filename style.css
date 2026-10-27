@@ -494,3 +494,117 @@ footer {
     }
 
 }
+
+
+
+/* Lab 2 Grade 4: Interactive Skills Showcase */
+
+#interactive-skills {
+    scroll-margin-top: 2rem;
+}
+
+#interactive-skills .skill-controls {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #fff8f2;
+    border: 1px solid #f0d6c4;
+    border-radius: 14px;
+}
+
+#interactive-skills .skill-controls h3 {
+    margin: 1rem 0 0.75rem;
+}
+
+#interactive-skills .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+#interactive-skills .filter-buttons button {
+    padding: 0.7rem 1rem;
+    border: 1px solid #b65b43;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #793322;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+#interactive-skills .filter-buttons button:hover,
+#interactive-skills .filter-buttons button.active-filter {
+    background: #793322;
+    color: #ffffff;
+    border-color: #793322;
+}
+
+#interactive-skills .filter-buttons button:focus-visible,
+#interactive-skills select:focus-visible {
+    outline: 3px solid #e39a52;
+    outline-offset: 3px;
+}
+
+#interactive-skills select {
+    max-width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border: 1px solid #b65b43;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #33231e;
+    font: inherit;
+}
+
+#skillsCounter {
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+#skillsContainer .skill-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#skillsContainer .skill-card:hover {
+    transform: translateY(-3px);
+}
+
+#skillsContainer .skill-category {
+    display: inline-block;
+    padding: 0.3rem 0.65rem;
+    border-radius: 20px;
+    background: #f5e2d5;
+    color: #793322;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    #interactive-skills .skill-controls {
+        padding: 1rem;
+    }
+
+    #interactive-skills .filter-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #interactive-skills .filter-buttons button {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #interactive-skills .filter-buttons button,
+    #skillsContainer .skill-card {
+        transition: none;
+    }
+
+    #skillsContainer .skill-card:hover {
+        transform: none;
+    }
+}
