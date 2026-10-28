@@ -608,3 +608,201 @@ footer {
         transform: none;
     }
 }
+
+
+/* =========================================
+   LAB 2 GRADE 5: ACCESSIBILITY SETTINGS
+   ========================================= */
+
+/* Text size settings */
+body.text-small {
+    font-size: 14px;
+}
+
+body.text-medium {
+    font-size: 16px;
+}
+
+body.text-large {
+    font-size: 20px;
+}
+
+/* Help common text elements follow the selected size */
+body.text-small p,
+body.text-small li,
+body.text-small label,
+body.text-small input,
+body.text-small select,
+body.text-small textarea,
+body.text-small button {
+    font-size: 14px;
+}
+
+body.text-medium p,
+body.text-medium li,
+body.text-medium label,
+body.text-medium input,
+body.text-medium select,
+body.text-medium textarea,
+body.text-medium button {
+    font-size: 16px;
+}
+
+body.text-large p,
+body.text-large li,
+body.text-large label,
+body.text-large input,
+body.text-large select,
+body.text-large textarea,
+body.text-large button {
+    font-size: 20px;
+}
+
+/* Accessibility panel layout */
+.accessibility-panel {
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 1100px;
+    border: 2px solid #793322;
+    border-radius: 12px;
+    background: #fff8f2;
+    color: #33231e;
+}
+
+.accessibility-panel h2 {
+    margin-top: 0;
+}
+
+.text-size-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.accessibility-panel button {
+    padding: 0.7rem 1rem;
+    border: 2px solid #793322;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #793322;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.accessibility-panel button:hover,
+.accessibility-panel button.active-setting {
+    background: #793322;
+    color: #ffffff;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #e39a52;
+    outline-offset: 3px;
+}
+
+/* High contrast mode */
+body.high-contrast {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.high-contrast header,
+body.high-contrast nav,
+body.high-contrast main,
+body.high-contrast section,
+body.high-contrast footer,
+body.high-contrast article,
+body.high-contrast .accessibility-panel,
+body.high-contrast .skill-controls,
+body.high-contrast .skill-card {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast p,
+body.high-contrast li,
+body.high-contrast label,
+body.high-contrast span {
+    color: #ffffff;
+}
+
+body.high-contrast a {
+    color: #ffff00;
+    text-decoration: underline;
+}
+
+body.high-contrast button,
+body.high-contrast select,
+body.high-contrast input,
+body.high-contrast textarea {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+body.high-contrast button:hover,
+body.high-contrast button.active-setting,
+body.high-contrast .active-filter {
+    background: #ffff00;
+    color: #000000;
+    border-color: #ffff00;
+}
+
+body.high-contrast :focus-visible {
+    outline: 3px solid #ffff00;
+    outline-offset: 3px;
+}
+
+/* Feedback form error and success states */
+body.high-contrast .error,
+body.high-contrast [aria-invalid="true"] {
+    border: 3px solid #ff7777;
+}
+
+body.high-contrast #formStatus {
+    font-weight: 700;
+    border: 2px solid #ffffff;
+    padding: 0.5rem;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .accessibility-panel {
+        margin: 0.75rem;
+        padding: 1rem;
+    }
+
+    .text-size-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .accessibility-panel button {
+        width: 100%;
+    }
+}
+
+/* Respect the user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+

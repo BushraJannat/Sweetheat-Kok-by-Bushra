@@ -12,6 +12,45 @@
 
 <body>
 
+
+<!-- Grade 5: Accessibility Settings -->
+<section class="accessibility-panel" aria-labelledby="accessibilityHeading">
+    <h2 id="accessibilityHeading">Accessibility Settings</h2>
+
+    <div class="text-size-controls" aria-label="Text size settings">
+        <button type="button" data-textsize="small" aria-pressed="false">
+            Small Text
+        </button>
+
+        <button type="button" data-textsize="medium" aria-pressed="true">
+            Medium Text
+        </button>
+
+        <button type="button" data-textsize="large" aria-pressed="false">
+            Large Text
+        </button>
+    </div>
+
+    <button type="button" id="contrastToggle" aria-pressed="false">
+        High Contrast: Off
+    </button>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <header class="site-header">
 
         <div class="brand">
@@ -254,7 +293,7 @@
 
 </footer>
     
-
+<script src="accessibility.js" defer></script>
 </body>
 
 </html>
