@@ -907,3 +907,17 @@ body.high-contrast #skillsContainer .skill-category {
     color: #ffffff;
     border: 1px solid #ffffff;
 }
+
+
+/* Responsive proficiency bars on small screens */
+@media (max-width: 600px) {
+    .proficiency-track {
+        width: 100%;
+        height: 12px;
+        margin: 10px 0 18px;
+    }
+
+    .proficiency-fill {
+        height: 100%;
+    }
+}
