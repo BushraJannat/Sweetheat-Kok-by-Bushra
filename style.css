@@ -883,3 +883,14 @@ textarea:focus-visible {
     }
 }
 
+
+/* Improve proficiency bar visibility in high contrast mode */
+body.high-contrast .proficiency-track {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+body.high-contrast .proficiency-fill {
+    background-color: #ffff00;
+}
+
