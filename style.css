@@ -900,3 +900,10 @@ body.high-contrast #formStatus {
     background-color: #000000;
 }
 
+
+/* Improve skill category labels in high contrast mode */
+body.high-contrast #skillsContainer .skill-category {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
