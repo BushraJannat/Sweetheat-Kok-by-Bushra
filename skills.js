@@ -90,8 +90,30 @@ function createSkillCard(skill) {
     category.className = "skill-category";
     category.textContent = skill.category;
 
+    // Show proficiency text
     const rating = document.createElement("p");
-    rating.textContent = "Proficiency: " + skill.proficiency + " / 5";
+    rating.textContent =
+        "Proficiency: " + skill.proficiency + " / 5";
+
+    // Create visual proficiency bar
+    const progressTrack = document.createElement("div");
+    progressTrack.className = "proficiency-track";
+    progressTrack.setAttribute("role", "progressbar");
+    progressTrack.setAttribute("aria-label", skill.name + " proficiency");
+    progressTrack.setAttribute("aria-valuemin", "0");
+    progressTrack.setAttribute("aria-valuemax", "5");
+    progressTrack.setAttribute(
+        "aria-valuenow",
+        String(skill.proficiency)
+    );
+
+    const progressFill = document.createElement("div");
+    progressFill.className = "proficiency-fill";
+
+    const percentage = (skill.proficiency / 5) * 100;
+    progressFill.style.width = percentage + "%";
+
+    progressTrack.appendChild(progressFill);
 
     const experience = document.createElement("p");
     experience.textContent =
@@ -100,7 +122,14 @@ function createSkillCard(skill) {
     const description = document.createElement("p");
     description.textContent = skill.description;
 
-    card.append(title, category, rating, experience, description);
+    card.append(
+        title,
+        category,
+        rating,
+        progressTrack,
+        experience,
+        description
+    );
 
     return card;
 }
