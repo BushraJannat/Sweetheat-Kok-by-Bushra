@@ -921,3 +921,16 @@ body.high-contrast #skillsContainer .skill-category {
         height: 100%;
     }
 }
+
+/* Prevent long skill text from overflowing */
+.skill-card {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.skill-card h3,
+.skill-card p {
+    overflow-wrap: break-word;
+}
+
+
