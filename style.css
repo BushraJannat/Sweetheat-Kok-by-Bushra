@@ -845,3 +845,17 @@ body.high-contrast #formStatus {
     min-height: 20px;
 }
 
+
+/* Feedback form validation states */
+input.error,
+select.error,
+textarea.error {
+    border: 2px solid #b42318;
+}
+
+input.valid,
+select.valid,
+textarea.valid {
+    border: 2px solid #2e7d32;
+}
+
