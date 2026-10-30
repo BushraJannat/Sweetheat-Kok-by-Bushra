@@ -13,6 +13,14 @@ const counter = document.getElementById("characterCounter");
 const statusMessage = document.getElementById("formStatus");
 const clearButton = document.getElementById("clearButton");
 
+// Store the success message timer
+let successMessageTimer = null;
+
+
+
+
+
+
 // Show an error message for one field
 function showError(input, messageId, message) {
     input.classList.add("error");
@@ -210,16 +218,31 @@ form.addEventListener("submit", function (event) {
     // Reset the character counter
     updateCharacterCounter();
 
-    // Remove success message after 4 seconds
-    setTimeout(function () {
-        statusMessage.textContent = "";
-        statusMessage.style.color = "";
-    }, 4000);
+    // Clear any previous success message timer
+clearTimeout(successMessageTimer);
+
+successMessageTimer = setTimeout(function () {
+    statusMessage.textContent = "";
+    statusMessage.style.color = "";
+    successMessageTimer = null;
+}, 4000);
 });
 
 // Clear the form
 clearButton.addEventListener("click", function () {
     form.reset();
+
+
+clearTimeout(successMessageTimer);
+successMessageTimer = null;
+
+
+
+
+
+
+
+
 
     [
         [nameInput, "fullNameError"],
