@@ -934,3 +934,18 @@ body.high-contrast #skillsContainer .skill-category {
 }
 
 
+/* Improve spacing inside cooking skill cards */
+#skillsContainer .skill-card h3 {
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+#skillsContainer .skill-card p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+#skillsContainer .skill-card p:last-child {
+    margin-bottom: 0;
+}
+
