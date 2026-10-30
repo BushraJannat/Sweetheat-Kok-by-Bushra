@@ -92,3 +92,16 @@ Sweetheat Kök by Bushra is a personal cooking portfolio that presents my cookin
 - `skills.js` – Dynamic cooking skills, filtering and sorting
 - `accessibility.js` – Text size and contrast settings
 
+
+### Testing the Interactive Features
+
+- Open `feedback.html` and test the form with valid and invalid information.
+- Check that the character counter updates while typing.
+- Submit valid feedback and check that the form resets.
+- Open `recipes.html` and test the cooking skill category filters.
+- Change the sorting option and check the skill order.
+- Test all text-size settings in the accessibility panel.
+- Turn High Contrast on and off.
+- Refresh the page to check whether accessibility settings are saved.
+- Use the Tab, Enter and Space keys to test keyboard navigation.
+
