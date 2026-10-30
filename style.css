@@ -980,3 +980,17 @@ body.high-contrast #skillsContainer .skill-category {
         padding: 12px;
     }
 }
+
+
+/* Improve feedback form field spacing */
+#feedbackForm input,
+#feedbackForm select,
+#feedbackForm textarea {
+    margin-bottom: 12px;
+}
+
+#feedbackForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
