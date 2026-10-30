@@ -824,3 +824,15 @@ body.high-contrast #formStatus {
     transition: width 0.3s ease;
 }
 
+
+
+
+/* Feedback character counter */
+#characterCounter {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 6px;
+    transition: color 0.2s ease;
+}
+
+
