@@ -836,3 +836,12 @@ body.high-contrast #formStatus {
 }
 
 
+/* Feedback status message */
+#formStatus {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 12px;
+    padding: 8px 0;
+    min-height: 20px;
+}
+
