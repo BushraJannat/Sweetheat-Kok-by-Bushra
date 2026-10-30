@@ -147,10 +147,12 @@ function updateCharacterCounter() {
 nameInput.addEventListener("input", validateName);
 emailInput.addEventListener("input", validateEmail);
 topicInput.addEventListener("change", validateTopic);
+
 commentsInput.addEventListener("input", () => {
     updateCharacterCounter();
     validateComments();
 });
+
 websiteInput.addEventListener("input", validateWebsite);
 
 // Handle form submission
@@ -175,17 +177,44 @@ form.addEventListener("submit", function (event) {
     ) {
         statusMessage.textContent =
             "Please correct the errors above and try again.";
+
         statusMessage.style.color = "#b42318";
 
         form.querySelector(".error")?.focus();
         return;
     }
 
+    // Save the name before resetting the form
+    const submittedName = nameInput.value.trim();
+
+    // Show success message
     statusMessage.textContent =
-        "Thank you, " + nameInput.value.trim() +
-        "! Your feedback has been checked successfully.";
+        "Thanks for your feedback, " + submittedName + "!";
 
     statusMessage.style.color = "#2e7d32";
+
+    // Reset the form after successful submission
+    form.reset();
+
+    // Clear validation styles and error messages
+    [
+        [nameInput, "fullNameError"],
+        [emailInput, "emailError"],
+        [topicInput, "topicError"],
+        [commentsInput, "commentsError"],
+        [websiteInput, "websiteError"]
+    ].forEach(([input, messageId]) => {
+        clearFieldState(input, messageId);
+    });
+
+    // Reset the character counter
+    updateCharacterCounter();
+
+    // Remove success message after 4 seconds
+    setTimeout(function () {
+        statusMessage.textContent = "";
+        statusMessage.style.color = "";
+    }, 4000);
 });
 
 // Clear the form
