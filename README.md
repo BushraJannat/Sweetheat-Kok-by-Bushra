@@ -78,3 +78,17 @@ Grade 5
 
 Sweetheat Kök by Bushra is a personal cooking portfolio that presents my cooking journey, skills, food gallery and interactive JavaScript features.
 
+
+
+### Project Structure
+
+- `index.html` – Main portfolio homepage
+- `journey.html` – My cooking journey
+- `recipes.html` – Recipes and interactive cooking skills
+- `gallery.html` – Food gallery
+- `feedback.html` – Interactive feedback form
+- `style.css` – Website styling and responsive design
+- `feedback.js` – Feedback form validation and character counter
+- `skills.js` – Dynamic cooking skills, filtering and sorting
+- `accessibility.js` – Text size and contrast settings
+
