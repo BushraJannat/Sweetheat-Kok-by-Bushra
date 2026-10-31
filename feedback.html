@@ -95,7 +95,8 @@
             <div class="form-group">
                 <label for="comments">Comments</label>
                 <textarea id="comments" name="comments" rows="6"
-                          minlength="15" required></textarea>
+                          minlength="15" required
+                          aria-describedby="characterCounter commentsError"></textarea>
                 <p class="character-counter" id="characterCounter">
                     0 / 15 characters minimum
                 </p>
@@ -136,6 +137,8 @@
 
     <p>&copy; 2026 Sweetheat Kök by Bushra</p>
 </footer>
+
+<script src="feedback.js" defer></script>
 <script src="accessibility.js" defer></script>
 </body>
 </html>
