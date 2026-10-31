@@ -16,11 +16,6 @@ const clearButton = document.getElementById("clearButton");
 // Store the success message timer
 let successMessageTimer = null;
 
-
-
-
-
-
 // Show an error message for one field
 function showError(input, messageId, message) {
     input.classList.add("error");
@@ -148,6 +143,9 @@ function updateCharacterCounter() {
 
     if (length >= minimum) {
         counter.textContent += " — Minimum reached!";
+        counter.style.color = "#2e7d32";
+    } else {
+        counter.style.color = "#666666";
     }
 }
 
@@ -195,6 +193,9 @@ form.addEventListener("submit", function (event) {
     // Save the name before resetting the form
     const submittedName = nameInput.value.trim();
 
+    // Cancel any previous success message timer
+    clearTimeout(successMessageTimer);
+
     // Show success message
     statusMessage.textContent =
         "Thanks for your feedback, " + submittedName + "!";
@@ -218,31 +219,21 @@ form.addEventListener("submit", function (event) {
     // Reset the character counter
     updateCharacterCounter();
 
-    // Clear any previous success message timer
-clearTimeout(successMessageTimer);
-
-successMessageTimer = setTimeout(function () {
-    statusMessage.textContent = "";
-    statusMessage.style.color = "";
-    successMessageTimer = null;
-}, 4000);
+    // Remove success message after 4 seconds
+    successMessageTimer = setTimeout(function () {
+        statusMessage.textContent = "";
+        statusMessage.style.color = "";
+        successMessageTimer = null;
+    }, 4000);
 });
 
 // Clear the form
 clearButton.addEventListener("click", function () {
     form.reset();
 
-
-clearTimeout(successMessageTimer);
-successMessageTimer = null;
-
-
-
-
-
-
-
-
+    // Cancel the success message timer
+    clearTimeout(successMessageTimer);
+    successMessageTimer = null;
 
     [
         [nameInput, "fullNameError"],
