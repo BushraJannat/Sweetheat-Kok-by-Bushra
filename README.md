@@ -105,3 +105,13 @@ Sweetheat Kök by Bushra is a personal cooking portfolio that presents my cookin
 - Refresh the page to check whether accessibility settings are saved.
 - Use the Tab, Enter and Space keys to test keyboard navigation.
 
+
+## Documentation
+
+The project includes the following JavaScript files:
+
+- `feedback.js` – Handles feedback form validation, character counting, and submission messages.
+- `skills.js` – Manages cooking skills, category filtering, and sorting.
+- `accessibility.js` – Controls text size, high contrast mode, and saves accessibility preferences using localStorage.
+
+The project also includes a `style.css` file for the website's layout, responsive design, and visual styling.
