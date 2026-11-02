@@ -5,8 +5,14 @@
 const textSizeButtons = document.querySelectorAll("[data-textsize]");
 const contrastButton = document.getElementById("contrastToggle");
 
-// Read saved preferences, or use the defaults
-let textSize = localStorage.getItem("textSize") || "medium";
+// Read and validate saved accessibility preferences
+const savedTextSize = localStorage.getItem("textSize");
+const validTextSizes = ["small", "medium", "large"];
+
+let textSize = validTextSizes.includes(savedTextSize)
+    ? savedTextSize
+    : "medium";
+
 let highContrast = localStorage.getItem("highContrast") === "true";
 
 // Apply the selected accessibility settings
