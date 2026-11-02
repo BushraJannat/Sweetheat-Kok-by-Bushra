@@ -69,20 +69,23 @@
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName"
-                       autocomplete="name" required>
+                       autocomplete="name" required
+                       aria-describedby="fullNameError">
                 <p class="error-message" id="fullNameError"></p>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email"
-                       autocomplete="email" required>
+                       autocomplete="email" required
+                       aria-describedby="emailError">
                 <p class="error-message" id="emailError"></p>
             </div>
 
             <div class="form-group">
                 <label for="topic">Topic of Interest</label>
-                <select id="topic" name="topic" required>
+                <select id="topic" name="topic" required
+                        aria-describedby="topicError">
                     <option value="">Choose a topic</option>
                     <option value="Cooking Journey">Cooking Journey</option>
                     <option value="Recipes and Skills">Recipes &amp; Skills</option>
@@ -106,7 +109,8 @@
             <div class="form-group">
                 <label for="website">Website (optional)</label>
                 <input type="url" id="website" name="website"
-                       placeholder="https://example.com">
+                       placeholder="https://example.com"
+                       aria-describedby="websiteError">
                 <p class="error-message" id="websiteError"></p>
             </div>
 
