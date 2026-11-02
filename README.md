@@ -1,84 +1,44 @@
-\# Sweetheat Kök by Bushra
+# Sweetheat Kök by Bushra
 
-
-
-\## Lab 2 – Interactive Portfolio Enhancements
-
-
+## Lab 2 – Interactive Portfolio Enhancements
 
 A personal cooking portfolio combining Bangladeshi flavours, Asian heritage and European inspiration.
 
-
-
-\### Target Grade
-
-
+### Target Grade
 
 Grade 5
 
+### Lab 2 Features
 
+- Interactive newsletter subscription form with email validation and feedback messages
+- Interactive feedback form with JavaScript validation
+- Live character counter
+- Clear and success feedback
+- Data-driven cooking skills showcase
+- Dynamic skill cards
+- Category filtering
+- Skill sorting
+- Accessibility display settings
+- Small, Medium and Large text sizes
+- Normal and High Contrast modes
+- Persistent accessibility settings using localStorage
 
-\### Lab 2 Features
+### How to Run
 
+1. Download or clone this repository.
+2. Open the project folder.
+3. Open `index.html` in a web browser.
+4. No server or backend is required.
 
+### Technologies
 
-\- Interactive feedback form with JavaScript validation
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-\- Live character counter
-
-\- Clear and success feedback
-
-\- Data-driven cooking skills showcase
-
-\- Dynamic skill cards
-
-\- Category filtering
-
-\- Skill sorting
-
-\- Accessibility display settings
-
-\- Small, Medium and Large text sizes
-
-\- Normal and High Contrast modes
-
-\- Persistent accessibility settings using localStorage
-
-
-
-\### How to Run
-
-
-
-1\. Download or clone this repository.
-
-2\. Open the project folder.
-
-3\. Open `index.html` in a web browser.
-
-4\. No server or backend is required.
-
-
-
-\### Technologies
-
-
-
-\- HTML5
-
-\- CSS3
-
-\- Vanilla JavaScript
-
-
-
-\### Project
-
-
+### Project
 
 Sweetheat Kök by Bushra is a personal cooking portfolio that presents my cooking journey, skills, food gallery and interactive JavaScript features.
-
-
 
 ### Project Structure
 
@@ -89,29 +49,35 @@ Sweetheat Kök by Bushra is a personal cooking portfolio that presents my cookin
 - `feedback.html` – Interactive feedback form
 - `style.css` – Website styling and responsive design
 - `feedback.js` – Feedback form validation and character counter
+- `newsletter.js` – Newsletter email validation and subscription feedback
 - `skills.js` – Dynamic cooking skills, filtering and sorting
 - `accessibility.js` – Text size and contrast settings
 
-
 ### Testing the Interactive Features
 
+- Open `index.html` and test the newsletter form with valid and invalid email addresses.
+- Check that newsletter feedback messages appear correctly.
 - Open `feedback.html` and test the form with valid and invalid information.
 - Check that the character counter updates while typing.
 - Submit valid feedback and check that the form resets.
+- Test the Clear button.
 - Open `recipes.html` and test the cooking skill category filters.
 - Change the sorting option and check the skill order.
 - Test all text-size settings in the accessibility panel.
 - Turn High Contrast on and off.
 - Refresh the page to check whether accessibility settings are saved.
 - Use the Tab, Enter and Space keys to test keyboard navigation.
+- Check the website layout on desktop and mobile screens.
 
-
-## Documentation
+### Documentation
 
 The project includes the following JavaScript files:
 
-- `feedback.js` – Handles feedback form validation, character counting, and submission messages.
-- `skills.js` – Manages cooking skills, category filtering, and sorting.
-- `accessibility.js` – Controls text size, high contrast mode, and saves accessibility preferences using localStorage.
+- `newsletter.js` – Handles newsletter email validation and subscription messages.
+- `feedback.js` – Handles feedback form validation, character counting and submission messages.
+- `skills.js` – Manages cooking skills, category filtering and sorting.
+- `accessibility.js` – Controls text size, high contrast mode and saves accessibility preferences using localStorage.
 
-The project also includes a `style.css` file for the website's layout, responsive design, and visual styling.
+The project also includes a `style.css` file for the website's layout, responsive design and visual styling.
+
+**Note:** The newsletter subscription is a front-end demonstration. No emails are sent and no backend service is connected.
