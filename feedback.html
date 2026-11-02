@@ -100,9 +100,14 @@
                 <textarea id="comments" name="comments" rows="6"
                           minlength="15" required
                           aria-describedby="characterCounter commentsError"></textarea>
-                <p class="character-counter" id="characterCounter">
+
+                <p class="character-counter"
+                   id="characterCounter"
+                   aria-live="polite"
+                   aria-atomic="true">
                     0 / 15 characters minimum
                 </p>
+
                 <p class="error-message" id="commentsError"></p>
             </div>
 
