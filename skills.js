@@ -122,9 +122,9 @@ function createSkillCard(skill) {
     experience.textContent =
         "Experience: " + skill.yearsExperience + " years";
 
-    const description = document.createElement("p");
-    description.textContent = skill.description;
-
+const description = document.createElement("p");
+description.className = "skill-description";
+description.textContent = skill.description;
     card.append(
         title,
         category,
@@ -163,6 +163,17 @@ function renderSkills() {
     }
 
     // Remove the old cards
+
+
+// Show a message when no skills match the filter
+if (visibleSkills.length === 0) {
+    skillsContainer.textContent = "No skills found.";
+}
+
+
+
+
+
     skillsContainer.replaceChildren();
 
     // Create cards from the filtered and sorted data
