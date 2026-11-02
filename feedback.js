@@ -132,14 +132,15 @@ function validateWebsite() {
         return false;
     }
 }
-
 // Update the live character counter
 function updateCharacterCounter() {
     const length = commentsInput.value.length;
     const minimum = 15;
+    const remaining = Math.max(0, minimum - length);
 
     counter.textContent =
-        length + " / " + minimum + " characters minimum";
+        length + " / " + minimum +
+        " characters minimum (" + remaining + " remaining)";
 
     if (length >= minimum) {
         counter.textContent += " — Minimum reached!";
