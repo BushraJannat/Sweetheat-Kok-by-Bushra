@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,31 +11,28 @@
 
 <body>
 
+    <!-- Grade 5: Accessibility Settings -->
+    <section class="accessibility-panel" aria-labelledby="accessibilityHeading">
+        <h2 id="accessibilityHeading">Accessibility Settings</h2>
 
+        <div class="text-size-controls" aria-label="Text size settings">
+            <button type="button" data-textsize="small" aria-pressed="false">
+                Small Text
+            </button>
 
-<!-- Grade 5: Accessibility Settings -->
-<section class="accessibility-panel" aria-labelledby="accessibilityHeading">
-    <h2 id="accessibilityHeading">Accessibility Settings</h2>
+            <button type="button" data-textsize="medium" aria-pressed="true">
+                Medium Text
+            </button>
 
-    <div class="text-size-controls" aria-label="Text size settings">
-        <button type="button" data-textsize="small" aria-pressed="false">
-            Small Text
+            <button type="button" data-textsize="large" aria-pressed="false">
+                Large Text
+            </button>
+        </div>
+
+        <button type="button" id="contrastToggle" aria-pressed="false">
+            High Contrast: Off
         </button>
-
-        <button type="button" data-textsize="medium" aria-pressed="true">
-            Medium Text
-        </button>
-
-        <button type="button" data-textsize="large" aria-pressed="false">
-            Large Text
-        </button>
-    </div>
-
-    <button type="button" id="contrastToggle" aria-pressed="false">
-        High Contrast: Off
-    </button>
-</section>
-
+    </section>
 
     <header class="site-header">
 
@@ -43,7 +41,7 @@
             <p>by Bushra</p>
         </div>
 
-        <nav class="navigation">
+        <nav class="navigation" aria-label="Main navigation">
             <a class="active" href="index.html">Home</a>
             <a href="journey.html">My Cooking Journey</a>
             <a href="recipes.html">Recipes &amp; Skills</a>
@@ -51,7 +49,6 @@
         </nav>
 
     </header>
-
 
     <main>
 
@@ -98,7 +95,6 @@
 
         </section>
 
-
         <!-- Food Inspiration Section -->
         <section class="intro">
 
@@ -115,7 +111,6 @@
                     </p>
                 </article>
 
-
                 <article>
                     <h3>European Inspiration</h3>
 
@@ -124,7 +119,6 @@
                         inspire me to try new ideas.
                     </p>
                 </article>
-
 
                 <article>
                     <h3>Fusion Creations</h3>
@@ -139,8 +133,57 @@
 
         </section>
 
-    </main>
+        <!-- Newsletter Subscription Section -->
+        <section class="newsletter-section"
+                 aria-labelledby="newsletterHeading">
 
+            <div class="newsletter-content">
+
+                <p class="small-heading">STAY CONNECTED</p>
+
+                <h2 id="newsletterHeading">Join Our Newsletter</h2>
+
+                <p>
+                    Get inspired by new recipes, cooking ideas and
+                    delicious Euro-Asian fusion creations.
+                </p>
+
+                <form id="newsletterForm" class="newsletter-form">
+
+                    <label for="newsletterEmail">
+                        Your Email Address
+                    </label>
+
+                    <div class="newsletter-input-group">
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            name="newsletterEmail"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <button type="submit">
+                            Subscribe
+                        </button>
+
+                    </div>
+
+                    <p id="newsletterStatus"
+                       class="newsletter-status"
+                       role="status"
+                       aria-live="polite">
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
 
     <footer class="site-footer">
 
@@ -150,8 +193,8 @@
 
     </footer>
 
+    <script src="newsletter.js" defer></script>
+    <script src="accessibility.js" defer></script>
 
-<script src="accessibility.js" defer></script>
 </body>
-
 </html>
