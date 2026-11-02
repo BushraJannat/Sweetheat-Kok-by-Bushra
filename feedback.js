@@ -229,7 +229,7 @@ form.addEventListener("submit", function (event) {
 
 // Clear the form
 clearButton.addEventListener("click", function () {
-    form.reset();
+    form.reset();fvfvfvd																				
 
     // Cancel the success message timer
     clearTimeout(successMessageTimer);
