@@ -28,3 +28,6 @@ newsletterForm.addEventListener("submit", function (event) {
 
     newsletterForm.reset();
 });
+newsletterEmail.addEventListener("input", function () {
+    newsletterStatus.textContent = "";
+});
