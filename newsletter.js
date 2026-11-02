@@ -12,6 +12,15 @@ newsletterForm.addEventListener("submit", function (event) {
 
     const email = newsletterEmail.value.trim();
 
+
+
+// Remove unnecessary spaces before validating the email
+newsletterEmail.value = email;
+
+
+
+
+
     if (!newsletterEmail.checkValidity() || email === "") {
         newsletterStatus.textContent =
             "Please enter a valid email address.";
