@@ -72,6 +72,9 @@ const skills = [
 // Find the HTML elements
 const skillsContainer = document.getElementById("skillsContainer");
 const skillsCounter = document.getElementById("skillsCounter");
+// Announce skill count updates to screen readers
+skillsCounter.setAttribute("aria-live", "polite");
+skillsCounter.setAttribute("aria-atomic", "true");
 const skillSort = document.getElementById("skillSort");
 const filterButtons = document.querySelectorAll("[data-category]");
 
