@@ -122,9 +122,17 @@ function createSkillCard(skill) {
     experience.textContent =
         "Experience: " + skill.yearsExperience + " years";
 
+
+
 const description = document.createElement("p");
 description.className = "skill-description";
 description.textContent = skill.description;
+
+
+
+
+
+
     card.append(
         title,
         category,
