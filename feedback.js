@@ -150,17 +150,45 @@ function updateCharacterCounter() {
     }
 }
 
+
+// Clear the general form status when the user makes changes
+function clearFormStatusOnEdit() {
+    statusMessage.textContent = "";
+    statusMessage.style.color = "";
+}
+
+
+
+
 // Validate fields while the user types
-nameInput.addEventListener("input", validateName);
-emailInput.addEventListener("input", validateEmail);
-topicInput.addEventListener("change", validateTopic);
+nameInput.addEventListener("input", () => {
+    validateName();
+    clearFormStatusOnEdit();
+});
+
+emailInput.addEventListener("input", () => {
+    validateEmail();
+    clearFormStatusOnEdit();
+});
+
+topicInput.addEventListener("change", () => {
+    validateTopic();
+    clearFormStatusOnEdit();
+});
 
 commentsInput.addEventListener("input", () => {
     updateCharacterCounter();
     validateComments();
+    clearFormStatusOnEdit();
 });
 
-websiteInput.addEventListener("input", validateWebsite);
+websiteInput.addEventListener("input", () => {
+    validateWebsite();
+    clearFormStatusOnEdit();
+});
+
+
+
 
 // Handle form submission
 form.addEventListener("submit", function (event) {
