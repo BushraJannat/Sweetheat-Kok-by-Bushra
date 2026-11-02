@@ -187,7 +187,13 @@ form.addEventListener("submit", function (event) {
 
         statusMessage.style.color = "#b42318";
 
-        form.querySelector(".error")?.focus();
+        // Focus the first invalid field to help the user correct the form
+
+const firstInvalidField = form.querySelector('[aria-invalid="true"]');
+
+if (firstInvalidField) {
+    firstInvalidField.focus();
+}
         return;
     }
 
