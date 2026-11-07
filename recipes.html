@@ -11,45 +11,28 @@
 
 <body>
 
+    <!-- Accessibility Settings -->
+    <section class="accessibility-panel" aria-labelledby="accessibilityHeading">
+        <h2 id="accessibilityHeading">Accessibility Settings</h2>
 
+        <div class="text-size-controls" aria-label="Text size settings">
+            <button type="button" data-textsize="small" aria-pressed="false">
+                Small Text
+            </button>
 
-<!-- Grade 5: Accessibility Settings -->
-<section class="accessibility-panel" aria-labelledby="accessibilityHeading">
-    <h2 id="accessibilityHeading">Accessibility Settings</h2>
+            <button type="button" data-textsize="medium" aria-pressed="true">
+                Medium Text
+            </button>
 
-    <div class="text-size-controls" aria-label="Text size settings">
-        <button type="button" data-textsize="small" aria-pressed="false">
-            Small Text
+            <button type="button" data-textsize="large" aria-pressed="false">
+                Large Text
+            </button>
+        </div>
+
+        <button type="button" id="contrastToggle" aria-pressed="false">
+            High Contrast: Off
         </button>
-
-        <button type="button" data-textsize="medium" aria-pressed="true">
-            Medium Text
-        </button>
-
-        <button type="button" data-textsize="large" aria-pressed="false">
-            Large Text
-        </button>
-    </div>
-
-    <button type="button" id="contrastToggle" aria-pressed="false">
-        High Contrast: Off
-    </button>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
     <header class="site-header">
         <div class="brand">
@@ -182,13 +165,19 @@
 
                 <select id="skillSort">
                     <option value="proficiency">
-                        Proficiency: Highest first
+                        Proficiency: Highest to Lowest
                     </option>
-                    <option value="experience">
-                        Experience: Highest first
+
+                    <option value="experience-high">
+                        Experience: Highest to Lowest
                     </option>
+
+                    <option value="experience-low">
+                        Experience: Lowest to Highest
+                    </option>
+
                     <option value="name">
-                        Name: A–Z
+                        Name: A-Z
                     </option>
                 </select>
             </div>
@@ -490,7 +479,8 @@
     </footer>
 
     <script src="skills.js" defer></script>
-<script src="accessibility.js" defer></script>
+    <script src="accessibility.js" defer></script>
+
 </body>
 
 </html>

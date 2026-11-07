@@ -72,11 +72,12 @@ const skills = [
 // Find the HTML elements
 const skillsContainer = document.getElementById("skillsContainer");
 const skillsCounter = document.getElementById("skillsCounter");
+const skillSort = document.getElementById("skillSort");
+const filterButtons = document.querySelectorAll("[data-category]");
+
 // Announce skill count updates to screen readers
 skillsCounter.setAttribute("aria-live", "polite");
 skillsCounter.setAttribute("aria-atomic", "true");
-const skillSort = document.getElementById("skillSort");
-const filterButtons = document.querySelectorAll("[data-category]");
 
 // Remember the currently selected category
 let selectedCategory = "all";
@@ -102,7 +103,10 @@ function createSkillCard(skill) {
     const progressTrack = document.createElement("div");
     progressTrack.className = "proficiency-track";
     progressTrack.setAttribute("role", "progressbar");
-    progressTrack.setAttribute("aria-label", skill.name + " proficiency");
+    progressTrack.setAttribute(
+        "aria-label",
+        skill.name + " proficiency"
+    );
     progressTrack.setAttribute("aria-valuemin", "0");
     progressTrack.setAttribute("aria-valuemax", "5");
     progressTrack.setAttribute(
@@ -122,16 +126,9 @@ function createSkillCard(skill) {
     experience.textContent =
         "Experience: " + skill.yearsExperience + " years";
 
-
-
-const description = document.createElement("p");
-description.className = "skill-description";
-description.textContent = skill.description;
-
-
-
-
-
+    const description = document.createElement("p");
+    description.className = "skill-description";
+    description.textContent = skill.description;
 
     card.append(
         title,
@@ -147,6 +144,7 @@ description.textContent = skill.description;
 
 // Display the cards on the page
 function renderSkills() {
+
     // First, filter the skills
     let visibleSkills = skills.filter(function (skill) {
         return selectedCategory === "all" ||
@@ -157,37 +155,47 @@ function renderSkills() {
     visibleSkills = [...visibleSkills];
 
     if (skillSort.value === "proficiency") {
+
+        // Proficiency: Highest to Lowest
         visibleSkills.sort(function (a, b) {
             return b.proficiency - a.proficiency;
         });
-    } else if (skillSort.value === "experience") {
+
+    } else if (skillSort.value === "experience-high") {
+
+        // Experience: Highest to Lowest
         visibleSkills.sort(function (a, b) {
             return b.yearsExperience - a.yearsExperience;
         });
+
+    } else if (skillSort.value === "experience-low") {
+
+        // Experience: Lowest to Highest
+        visibleSkills.sort(function (a, b) {
+            return a.yearsExperience - b.yearsExperience;
+        });
+
     } else if (skillSort.value === "name") {
+
+        // Name: A-Z
         visibleSkills.sort(function (a, b) {
             return a.name.localeCompare(b.name);
         });
     }
 
     // Remove the old cards
-
-
-// Show a message when no skills match the filter
-if (visibleSkills.length === 0) {
-    skillsContainer.textContent = "No skills found.";
-}
-
-
-
-
-
     skillsContainer.replaceChildren();
 
-    // Create cards from the filtered and sorted data
-    visibleSkills.forEach(function (skill) {
-        skillsContainer.appendChild(createSkillCard(skill));
-    });
+    // Show a message when no skills match the filter
+    if (visibleSkills.length === 0) {
+        skillsContainer.textContent = "No skills found.";
+    } else {
+
+        // Create cards from the filtered and sorted data
+        visibleSkills.forEach(function (skill) {
+            skillsContainer.appendChild(createSkillCard(skill));
+        });
+    }
 
     // Update the result counter
     skillsCounter.textContent =
@@ -198,14 +206,22 @@ if (visibleSkills.length === 0) {
 // Handle category filter buttons
 filterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
+
         selectedCategory = button.dataset.category;
 
         filterButtons.forEach(function (filterButton) {
             const isActive =
                 filterButton.dataset.category === selectedCategory;
 
-            filterButton.classList.toggle("active-filter", isActive);
-            filterButton.setAttribute("aria-pressed", String(isActive));
+            filterButton.classList.toggle(
+                "active-filter",
+                isActive
+            );
+
+            filterButton.setAttribute(
+                "aria-pressed",
+                String(isActive)
+            );
         });
 
         renderSkills();
